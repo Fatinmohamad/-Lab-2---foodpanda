@@ -1,0 +1,97 @@
+package deliverysystem;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author HP
+ */
+public class DeliverySystem {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner scan = new Scanner(System.in);
+
+        Personnel delivery[] = new Personnel[10];
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Enter name   :");
+            String staff_name = scan.nextLine();
+            System.out.print("Enter Id     :");
+            String staff_id = scan.nextLine();
+            System.out.print("Enter salary :");
+            String staff_salary = scan.nextLine();
+            System.out.print("Enter branch :");
+            String branch = scan.nextLine();
+            delivery[i] = new Personnel(staff_name, staff_id, staff_salary, branch);
+        }
+
+        System.out.println("Staff Information");
+        System.out.println("--------------------");
+        for (int i = 0; i < 10; i++) {
+            System.out.println(" Staff name   : " + delivery[i].getStaffName());
+            System.out.println(" Staff id     : " + delivery[i].getStaffId());
+            System.out.println(" Staff salary : " + delivery[i].getStaffSalary());
+            System.out.println(" Branch       : " + delivery[i].getBranch());
+            System.out.println("--------------------");
+            
+        }
+
+    }
+
+}
+
+
+
+class code.
+
+
+package deliverysystem;
+
+/**
+ *
+ * @author HP
+ */
+public class Personnel {
+
+    private final String staff_name;
+    private final String staff_id;
+    String staff_salary;
+    String branch;
+
+    Personnel(String staff_name, String staff_id, String staff_salary, String branch) {
+        this.staff_name = staff_name;
+        this.staff_id = staff_id;
+        this.staff_salary = staff_salary;
+        this.branch = branch;
+    }
+
+    String getStaffName() {
+        return staff_name;
+    }
+
+    String getStaffId() {
+        return staff_id;
+    }
+
+    String getStaffSalary() {
+        return staff_salary;
+
+    }
+
+    String getBranch() {
+        return branch;
+
+    }
+
+    void setSalary(String staff_salary) {
+        this.staff_salary = staff_salary;
+    }
+
+    void setBranch(String branch) {
+        this.branch = branch;
+    }
+}
